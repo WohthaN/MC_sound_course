@@ -1,0 +1,45 @@
+## Content
+ - Basics
+   - Connections (XLR, RCA, TS \[Jack\], DI Boxes)
+   - Signal levels
+   - Phantom power
+   - Stage Elements
+     - Power line
+     - Back line
+     - Monitors
+   - Ground loops
+ - Signal Path of mixer
+   - E.g. take from manual of Ui24r - use it to follow the signals along and explain at high level all elements signals go through
+ - Patching (unlikely to use at Hardronic festival, but know it is there as source of error)
+ - Groups
+   - Sub groups
+   - VCA - Voltage Controlled Amplifier
+   - View
+   - Mute
+ - Sends (Aux / FX sends)
+   - PRE/POST Fader
+   - PRE/POST Proc.
+ - Effects (possibly not cover in first session, but mention it exists)
+   - EQ
+     - White noise
+     - Voice
+     - Guitar
+     - Bass
+   - Gate
+   - Compression
+   - FX sends
+     - Reverb
+     - Delay
+     - Chorus
+     - Room
+       
+## Practice
+ - Record a multitrack (Guitar, keyboard, bass) ~ 5 mins
+ - Use record to do live mixing
+ - Setup:
+   - Back L/R -> FOH
+   - Front L/R -> AUX 1 / AUX 2
+   - 2x additional Yamaha -> AUX 3 / 4
+   - 4 additional monitors -> AUX 5 / 6 / 7 / 8
+ - Drills:
+   - E.g. bassist can't hear themselves - put their monitor up
