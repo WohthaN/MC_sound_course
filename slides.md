@@ -43,8 +43,8 @@ header-includes:
 
 **Outlet Placement**
 
-- Every 100 ft of 14-gauge extension cord at 15A drops ~5V
-- Keep amplifiers within 25 ft of a power outlet
+- Every 30 m of 2.5 mm² extension cord at 15A drops ~5V
+- Keep amplifiers within 8 m of a power outlet
 - Use the shortest, heaviest-gauge cable possible
 - For large shows: dedicated power distro from a 50A/100A cam-lock feed
 
@@ -153,7 +153,7 @@ Converts high-Z unbalanced signal → low-Z balanced signal for long cable runs
 
 **TS (Tip-Sleeve)**
 
-- 2 conductors: unbalanced. Keep under 15–20 ft to avoid noise
+- 2 conductors: unbalanced. Keep under 5–6 m to avoid noise
 - Used for: instrument cables (guitar, bass, keyboard)
 
 **Speakon (NL4/NL2)**
@@ -173,12 +173,12 @@ Impedance = total opposition to AC flow, measured in ohms. Varies with frequency
 **High-Z (Hi-Z):** 10kΩ – 1MΩ (guitar/bass pickups)
 
 - Interacts with cable capacitance → rolls off high frequencies over distance
-- A 25 ft cable on a guitar pickup loses audible highs above 5 kHz
-- Use short cables (10–15 ft) or DI boxes for long runs
+- An 8 m cable on a guitar pickup loses audible highs above 5 kHz
+- Use short cables (3–5 m) or DI boxes for long runs
 
 **Low-Z (Lo-Z):** 150–600Ω (professional mics, balanced outputs)
 
-- Can travel hundreds of feet without degradation
+- Can travel tens of metres without degradation
 - Low source impedance "drives" cable capacitance effectively
 
 **The 10:1 Rule:** Input impedance ≥ 10 × source impedance for proper signal transfer
@@ -207,19 +207,19 @@ Mic Level ──── Instrument Level ──── Line Level ──── Spe
 - Noise induced equally on both wires (same polarity)
 - At receiver: Cold is inverted again → audio adds (+6 dB), noise cancels (0)
 - This is **common-mode rejection**
-- Can run **hundreds of feet** without noise
+- Can run **tens of metres** without noise
 
 **Unbalanced (TS, RCA):** 2 conductors — Signal and Ground
 
 - No common-mode rejection — noise is added directly to signal
-- Keep under **15–20 feet**
+- Keep under **5–6 m**
 - Acts as antenna for RFI and EMI over longer distances
 
 ### Module 2 — Key Takeaways
 
 1. **XLR is the professional audio standard** — balanced, locking, noise-rejecting
 2. **Never use 1/4" TS for speaker connections** — use Speakon
-3. **Impedance matters** — High-Z needs short cables or DI boxes; Low-Z runs clean for hundreds of feet
+3. **Impedance matters** — High-Z needs short cables or DI boxes; Low-Z runs clean for tens of metres
 4. **The 10:1 impedance rule** — input Z ≥ 10× source Z
 5. **Know your signal levels** — Mic < Instrument < Line < Speaker. Mismatch = noise or distortion
 6. **Balanced cables reject noise** via common-mode rejection. Unbalanced = keep short
@@ -634,7 +634,7 @@ Example: Delay tower 50 m from main PA → Delay = 50 ÷ 0.343 = **145.8 ms**
 
 ### Module 7 — Stage Monitors (Wedges)
 
-- Designed for **near-field listening** (3–10 ft distance)
+- Designed for **near-field listening** (1–3 m distance)
 - **Coaxial drivers:** HF driver mounted inside LF cone → point-source radiation
   - Sound doesn't change as musician moves off-axis
   - Critical on a crowded stage
@@ -747,14 +747,14 @@ Acoustic feedback: speaker → mic → mixer → amp → speaker (louder). Loop 
 
 | Distance from mic | Relative level | GBF impact |
 |---|---|---|
-| Lips on grille (0 in) | 0 dB (reference) | Maximum GBF |
-| 1 inch | −6 dB | Lost 6 dB GBF |
-| 6 inches | −12 dB | Lost 12 dB GBF |
-| 12 inches | −18 dB | Lost 18 dB GBF |
+| Lips on grille (contact) | 0 dB (reference) | Maximum GBF |
+| 2.5 cm | −6 dB | Lost 6 dB GBF |
+| 15 cm | −12 dB | Lost 12 dB GBF |
+| 30 cm | −18 dB | Lost 18 dB GBF |
 
 **"Eat the mic"** = the single most effective feedback prevention technique
 
-- 12 dB of free GBF just by moving from 6 inches to lips-on-grille
+- 12 dB of free GBF just by moving from 15 cm to lips-on-grille
 - No EQ, no speaker repositioning needed
 
 ### Module 8 — Number of Open Microphones (NOM)
@@ -947,7 +947,7 @@ Source → Cable → DI/Preamp → Channel Strip → Fader → Bus → Master �
 **Over-Under Cable Wrap:**
 
 1. Hold connector in left hand
-2. Grab cable ~18" away — natural twist → "over" loop
+2. Grab cable ~45 cm away — natural twist → "over" loop
 3. Reverse twist → "under" loop (alternating direction)
 4. Continue alternating until fully coiled
 5. Secure with velcro strap or cable tie

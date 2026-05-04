@@ -16,10 +16,10 @@ Before an audio signal can flow, the physical and electrical environment must be
 Audio equipment must be powered on circuits that are completely separate from lighting dimmers, HVAC systems, and catering equipment. Lighting dimmers — especially older ones — chop the AC sine wave to control brightness, which generates high-frequency electrical noise that travels back through the power lines and straight into your audio gear. This manifests as a harsh buzzing or "dimmer hash" that is nearly impossible to remove once it's in the signal chain. Similarly, HVAC motors and refrigerators (think catering coolers) create large voltage spikes and electromagnetic interference when they cycle on and off. In a venue, request that audio gets its own breaker panel or at minimum its own circuit breakers. If you're working a small gig at a bar, find out which outlets are on which breakers and keep the band on separate circuits from the beer fridge and the lighting rig.
 
 **Outlet Placement:**
-Running long power cables across a stage is both a tripping hazard and an electrical safety risk. Every 100 feet of standard 14-gauge extension cord at 15A of load drops roughly 5 volts — that means an amp at the end of a 100-foot run might be seeing 110V instead of 115V, causing it to run hotter and potentially distort or shut down under load. Plan the stage so that AC power outlets (or a power distribution unit / distro) are positioned within 25 feet of every amplifier, keyboard rig, and drum station. Use the shortest, heaviest-gauge power cable possible. For larger shows, a dedicated power distro is run from a breaker panel (often a 50A or 100A cam-lock feed) and distributed to multiple 20A circuits around the stage.
+Running long power cables across a stage is both a tripping hazard and an electrical safety risk. Every 30 m of standard 2.5 mm² extension cord at 15A of load drops roughly 5 volts — that means an amp at the end of a 30-metre run might be seeing 110V instead of 115V, causing it to run hotter and potentially distort or shut down under load. Plan the stage so that AC power outlets (or a power distribution unit / distro) are positioned within 8 m of every amplifier, keyboard rig, and drum station. Use the shortest, heaviest-gauge power cable possible. For larger shows, a dedicated power distro is run from a breaker panel (often a 50A or 100A cam-lock feed) and distributed to multiple 20A circuits around the stage.
 
 **The "Star Ground" Principle:**
-A ground loop occurs when two pieces of audio equipment are connected to different earth-ground references. Even a fraction of a volt difference between the ground at the FOH position and the ground on stage is enough to cause current to flow down the audio cable's shield, inducing a 50Hz (Europe) or 60Hz (North America) hum. The star ground principle solves this by ensuring that every piece of audio equipment — from the mixing console to the last pedal on the guitarist's board — shares the exact same ground reference. You achieve this by plugging everything into a single power distribution source. The power distro becomes the "star" point, and all grounds radiate from it. If FOH is 100 feet from the stage, run a single heavy-gauge feeder cable from the stage distro to the FOH console rather than plugging the console into a separate wall outlet.
+A ground loop occurs when two pieces of audio equipment are connected to different earth-ground references. Even a fraction of a volt difference between the ground at the FOH position and the ground on stage is enough to cause current to flow down the audio cable's shield, inducing a 50Hz (Europe) or 60Hz (North America) hum. The star ground principle solves this by ensuring that every piece of audio equipment — from the mixing console to the last pedal on the guitarist's board — shares the exact same ground reference. You achieve this by plugging everything into a single power distribution source. The power distro becomes the "star" point, and all grounds radiate from it. If FOH is 30 m from the stage, run a single heavy-gauge feeder cable from the stage distro to the FOH console rather than plugging the console into a separate wall outlet.
 
 ```
      ┌──────────────────────────────────────┐
@@ -53,7 +53,7 @@ In an analog setup, a "snake" is a heavy multi-core cable that carries 16, 24, o
 #### DI Boxes (Direct Injection)
 
 **Passive vs. Active DIs:**
-A DI box converts a high-impedance, unbalanced signal (like a guitar or keyboard output) into a low-impedance, balanced signal that can travel hundreds of feet to the mixing console without noise degradation.
+A DI box converts a high-impedance, unbalanced signal (like a guitar or keyboard output) into a low-impedance, balanced signal that can travel tens of metres to the mixing console without noise degradation.
 
 - **Passive DI** (e.g., Radial JDI, Whirlwind IMP 2): Uses a transformer to convert the signal. No power required. Because a transformer is a passive component, it can handle extremely high SPL sources without distortion — making it ideal for passive bass guitars, speaker emulator outputs, and any source that already has a strong signal. Passive DIs also have a natural transformer saturation that can sound musical on bass. The downside is that with very weak sources (like a passive piezo violin pickup), a passive DI can lose some signal level and high-frequency detail.
 
@@ -135,7 +135,7 @@ The XLR connector is the backbone of professional audio. It's a circular connect
 TRS looks like a standard 1/4" guitar plug but has three conductors instead of two. The tip carries the positive signal, the ring carries the negative (inverted) signal, and the sleeve is ground. This allows TRS to carry a balanced signal just like XLR. TRS is commonly found on: (1) balanced line-level connections between outboard gear and mixers, (2) headphone outputs (where tip = left channel, ring = right channel, sleeve = common ground), and (3) insert cables (Y-cables with TRS on one end splitting to two TS connectors — one for the send and one for the return). A 1/8" (3.5mm) TRS is what you'll find on laptop and phone headphone jacks.
 
 **TS (Tip-Sleeve):**
-TS is an unbalanced 1/4" connector with only two conductors: tip (signal) and sleeve (ground). It's used for instrument cables (guitar, bass, keyboard outputs). Because it's unbalanced, TS cables are susceptible to noise — they act as antennas for radio frequency interference and electromagnetic noise. Keep TS cables under 15-20 feet (5-6 meters) to minimize noise pickup. If you need to run a guitar signal more than 20 feet to the stage box, use a DI box at the amp to convert the signal to balanced XLR.
+TS is an unbalanced 1/4" connector with only two conductors: tip (signal) and sleeve (ground). It's used for instrument cables (guitar, bass, keyboard outputs). Because it's unbalanced, TS cables are susceptible to noise — they act as antennas for radio frequency interference and electromagnetic noise. Keep TS cables under 5–6 m to minimize noise pickup. If you need to run a guitar signal more than 6 m to the stage box, use a DI box at the amp to convert the signal to balanced XLR.
 
 **Speakon (NL4/NL2):**
 The Speakon connector, made by Neutrik, is the industry standard for connecting amplifiers to passive speakers. NL2 has two contacts (1+ and 1-), suitable for single-driver speakers. NL4 has four contacts (1+, 1-, 2+, 2-), allowing a single cable to carry two separate speaker channels — this is used for bi-amped speakers where the low and high frequency drivers are powered by separate amplifier channels. Speakon connectors lock with a twist, carry high current safely, and have no exposed metal pins (making them safer than 1/4" TS, which can short-circuit if touched while the amp is powered). **Never use a 1/4" TS cable for speaker connections.** The 1/4" connector can arc and weld itself to the jack under high current, and the exposed tip can short against the speaker cabinet, potentially destroying the amplifier.
@@ -148,10 +148,10 @@ RCA connectors carry unbalanced line-level audio at consumer level (-10 dBV, app
 Impedance is the total opposition to the flow of alternating current, measured in ohms. It's not the same as DC resistance — impedance varies with frequency. In audio, understanding impedance is critical for proper signal transfer between devices.
 
 **High-Z (Hi-Z):**
-High-impedance sources, typically 10k ohm to 1M ohm, are characteristic of electric guitar and bass pickups. The problem with high-Z signals is that they interact significantly with the capacitance of the cable itself. A guitar pickup at 15k ohm sending signal through a 25-foot cable with typical capacitance will lose noticeable high-frequency content above 5kHz — the guitar sounds dull and lifeless. This is why guitarists use short cables (10-15 feet) between their guitar and the first pedal or amp, and why long cable runs from the stage to FOH must use low-Z balanced connections (via a DI box).
+High-impedance sources, typically 10k ohm to 1M ohm, are characteristic of electric guitar and bass pickups. The problem with high-Z signals is that they interact significantly with the capacitance of the cable itself. A guitar pickup at 15k ohm sending signal through an 8 m cable with typical capacitance will lose noticeable high-frequency content above 5kHz — the guitar sounds dull and lifeless. This is why guitarists use short cables (3–5 m) between their guitar and the first pedal or amp, and why long cable runs from the stage to FOH must use low-Z balanced connections (via a DI box).
 
 **Low-Z (Lo-Z):**
-Low-impedance sources, typically 150-600 ohm, are characteristic of professional microphones and balanced line-level outputs. Low-Z signals can travel hundreds of feet without audible signal degradation because the low source impedance effectively "drives" the cable capacitance, maintaining high-frequency response. This is why microphones use low-Z balanced XLR connections — the cable from the stage to FOH might be 200 feet long, and the signal arrives clean.
+Low-impedance sources, typically 150-600 ohm, are characteristic of professional microphones and balanced line-level outputs. Low-Z signals can travel tens of metres without audible signal degradation because the low source impedance effectively "drives" the cable capacitance, maintaining high-frequency response. This is why microphones use low-Z balanced XLR connections — the cable from the stage to FOH might be 60 m long, and the signal arrives clean.
 
 **The Impedance Bridging Rule:**
 For optimal signal transfer, the input impedance of the receiving device should be at least 10 times the output impedance of the source device. This is called "impedance bridging" and ensures maximum voltage transfer (not power transfer). A typical microphone output impedance of 150 ohm feeding a mixer input impedance of 1.5k ohm satisfies this 10:1 rule perfectly. Plugging a guitar with a 15k ohm output impedance into a mixer input with 1k ohm impedance will result in a massive loss of signal level and high-frequency content — the input "loads down" the pickup.
@@ -181,7 +181,7 @@ The amplified signal that drives passive speakers. After the line-level signal p
 #### Balanced vs. Unbalanced
 
 **How Balanced Cables Work:**
-A balanced connection uses three conductors: ground (shield), positive (hot), and negative (cold). The sending device sends the exact same audio signal on both the hot and cold wires, but the cold wire's signal is inverted (phase-flipped 180 degrees). As the signal travels down the cable, any electromagnetic noise that the cable picks up is induced equally onto both the hot and cold wires (in the same polarity). At the receiving end, the cold signal is flipped back (inverting it again), which has two effects: (1) the original audio signal on the cold wire is now in phase with the hot wire, so they add together (doubling the signal by 6 dB), and (2) the noise that was induced equally on both wires is now out of phase with itself, so it cancels out completely. This is called common-mode rejection, and it's why balanced cables can run hundreds of feet without picking up noise.
+A balanced connection uses three conductors: ground (shield), positive (hot), and negative (cold). The sending device sends the exact same audio signal on both the hot and cold wires, but the cold wire's signal is inverted (phase-flipped 180 degrees). As the signal travels down the cable, any electromagnetic noise that the cable picks up is induced equally onto both the hot and cold wires (in the same polarity). At the receiving end, the cold signal is flipped back (inverting it again), which has two effects: (1) the original audio signal on the cold wire is now in phase with the hot wire, so they add together (doubling the signal by 6 dB), and (2) the noise that was induced equally on both wires is now out of phase with itself, so it cancels out completely. This is called common-mode rejection, and it's why balanced cables can run tens of metres without picking up noise.
 
 ```
 Sending End:          Receiving End:
@@ -191,7 +191,7 @@ Cold:  ─── Audio ───  Cold:  ─── (-Audio) ──┤── Inve
 ```
 
 **Why Unbalanced Cables Are Limited:**
-An unbalanced cable (TS) has only two conductors: signal and ground. The ground wire serves double duty as both the return path for the audio signal and the shield. Because there's no inverted signal to provide common-mode rejection, any noise the cable picks up is simply added to the audio signal. Over short distances (under 15-20 feet), the noise is usually negligible. Over longer distances, the cable acts as an antenna, picking up radio stations, dimmer buzz, and electromagnetic interference from power cables. The longer the cable, the more noise it picks up — this is why unbalanced connections are kept short in professional audio.
+An unbalanced cable (TS) has only two conductors: signal and ground. The ground wire serves double duty as both the return path for the audio signal and the shield. Because there's no inverted signal to provide common-mode rejection, any noise the cable picks up is simply added to the audio signal. Over short distances (under 5–6 m), the noise is usually negligible. Over longer distances, the cable acts as an antenna, picking up radio stations, dimmer buzz, and electromagnetic interference from power cables. The longer the cable, the more noise it picks up — this is why unbalanced connections are kept short in professional audio.
 
 ---
 
@@ -203,8 +203,8 @@ A: Pin 1 = Ground/Shield, Pin 2 = Positive (Hot) signal, Pin 3 = Negative (Cold)
 **Q2: Why should you never use a 1/4" TS cable to connect an amplifier to a speaker?**
 A: 1/4" TS connectors can arc and weld themselves to the jack under the high current of a speaker-level signal. The exposed tip can also short against the speaker cabinet, potentially destroying the amplifier. Speakon connectors are designed to handle high current safely with no exposed conductors and a locking mechanism.
 
-**Q3: A guitarist wants to use a 30-foot cable from their guitar to their pedalboard. What problem might they notice, and how can it be fixed?**
-A: They'll notice a loss of high-frequency content (the guitar will sound dull and lifeless). This is because the high impedance of the guitar pickup interacts with the cable's capacitance, creating a low-pass filter that rolls off high frequencies. The fix is to use a shorter cable (10-15 feet) to the pedalboard and place buffered pedals or a dedicated buffer early in the signal chain to convert the signal to low impedance for the longer run.
+**Q3: A guitarist wants to use a 9 m cable from their guitar to their pedalboard. What problem might they notice, and how can it be fixed?**
+A: They'll notice a loss of high-frequency content (the guitar will sound dull and lifeless). This is because the high impedance of the guitar pickup interacts with the cable's capacitance, creating a low-pass filter that rolls off high frequencies. The fix is to use a shorter cable (3–5 m) to the pedalboard and place buffered pedals or a dedicated buffer early in the signal chain to convert the signal to low impedance for the longer run.
 
 **Q4: What is the approximate difference in voltage between professional line level (+4 dBu) and consumer line level (-10 dBV)?**
 A: Professional line level (+4 dBu = 1.228V) is approximately 12 dB louder than consumer line level (-10 dBV = 0.316V). This means consumer equipment needs about 12 dB more gain at the mixer, which also amplifies the noise floor.
@@ -237,10 +237,10 @@ Take a 50-foot TS cable and a 50-foot XLR cable. Run both cables parallel to a p
 
 1. **XLR is the professional audio standard.** It carries balanced audio, locks securely, and rejects noise over long runs.
 2. **Never use 1/4" TS for speaker connections.** The high current can arc, weld, and destroy equipment. Use Speakon connectors.
-3. **Impedance matters.** High-Z sources (guitars) need short cables or DI boxes. Low-Z sources (mics) can run hundreds of feet cleanly.
+3. **Impedance matters.** High-Z sources (guitars) need short cables or DI boxes. Low-Z sources (mics) can run tens of metres cleanly.
 4. **The 10:1 impedance rule.** The receiving device's input impedance should be at least 10x the source's output impedance for proper signal transfer.
 5. **Know your signal levels.** Mic level < Instrument level < Line level < Speaker level. Mis-matching levels causes noise or distortion.
-6. **Balanced cables reject noise through common-mode rejection.** Unbalanced cables should be kept under 15-20 feet.
+6. **Balanced cables reject noise through common-mode rejection.** Unbalanced cables should be kept under 5–6 m.
 
 ---
 
@@ -297,7 +297,7 @@ It's tempting to solve a ground loop by using a "cheater plug" or "widow maker" 
 **Q1: What causes a ground loop hum, and what frequency will you hear?**
 A: A ground loop is caused by audio equipment connected to different earth-ground points, creating a voltage difference that drives current through the audio cable's shield. The hum occurs at the mains frequency: 50Hz in 230V countries, 60Hz in 120V countries, often with harmonics (100/120Hz, 150/180Hz).
 
-**Q2: A bass player's amplifier is plugged into a wall outlet on stage. The DI output from the amp runs 100 feet to the FOH console, which is on a different circuit. You hear a loud hum. What are two ways to fix this?**
+**Q2: A bass player's amplifier is plugged into a wall outlet on stage. The DI output from the amp runs 30 m to the FOH console, which is on a different circuit. You hear a loud hum. What are two ways to fix this?**
 A: (1) Plug the bass amplifier into the same power distro as the FOH console (star grounding). (2) Engage the ground lift switch on the DI box to break the ground loop path through the audio cable shield.
 
 **Q3: Why is using a "cheater plug" (removing the third prong) to eliminate hum dangerous?**
@@ -559,7 +559,7 @@ A: Reduce the preamp gain. You only have 3 dB of headroom before digital clippin
 Set up a microphone and have someone speak at varying volumes (whisper, normal, loud, shout). Set the gain correctly by: (1) starting with the fader at unity, (2) having them speak at their loudest, (3) adjusting gain so peaks hit -12 to -18 dBFS. Then deliberately set the gain too low and compensate with the fader — listen to the increased noise. Then set the gain too high and listen to the distortion.
 
 **Exercise 2: Polarity Switch Test**
-Place two identical microphones facing each other, about 6 inches apart. Speak into them from the side (equidistant from both). With both channels at equal level, flip the polarity switch on one channel. You should hear a dramatic drop in low-frequency content (cancellation) when polarity is inverted. This demonstrates why polarity matters when combining multiple mics on a single source.
+Place two identical microphones facing each other, about 15 cm apart. Speak into them from the side (equidistant from both). With both channels at equal level, flip the polarity switch on one channel. You should hear a dramatic drop in low-frequency content (cancellation) when polarity is inverted. This demonstrates why polarity matters when combining multiple mics on a single source.
 
 **Exercise 3: Channel Strip Walkthrough**
 Route a single microphone through the entire channel strip. At each stage, solo the channel and listen: (1) Engage/disengage the HPF and sweep the frequency. (2) Apply a dramatic EQ cut and boost on each band. (3) Add compression with extreme settings (10:1 ratio, fast attack, fast release). (4) Insert a reverb effect. This exercise builds familiarity with every stage of the signal path.
@@ -974,10 +974,10 @@ Subwoofers reproduce the lowest frequencies (typically 30-100Hz). They're almost
 
 #### Stage Monitors (Wedges)
 
-Stage monitors are designed for near-field listening — they sit on the stage floor, angled up toward the musician's ears, at a distance of 3-10 feet. Design priorities: clarity, compact size, and controlled dispersion that minimizes bleed into adjacent zones.
+Stage monitors are designed for near-field listening — they sit on the stage floor, angled up toward the musician's ears, at a distance of 1–3 m. Design priorities: clarity, compact size, and controlled dispersion that minimizes bleed into adjacent zones.
 
 **Coaxial Drivers:**
-Many wedge monitors use coaxial drivers, where the high-frequency compression driver is mounted inside the low-frequency cone, sharing the same physical axis. This creates a point-source radiation pattern — the sound doesn't change significantly as the musician moves slightly off-axis. Critical on a crowded stage where a singer might move a few feet during a performance.
+Many wedge monitors use coaxial drivers, where the high-frequency compression driver is mounted inside the low-frequency cone, sharing the same physical axis. This creates a point-source radiation pattern — the sound doesn't change significantly as the musician moves slightly off-axis. Critical on a crowded stage where a singer might move a metre or two during a performance.
 
 **Monitor Mix Content:**
 A typical wedge monitor mix prioritizes clarity over full-range reproduction. Musicians need to hear: (1) their own vocal or instrument clearly, (2) other vocals for pitch reference, and (3) key rhythmic elements (kick, snare, hi-hat). They typically don't need (and don't want) the full-band mix at full volume. A common beginner mistake is putting everything in every monitor mix — this creates a wall of noise on stage that makes it harder to hear anything.
@@ -1147,10 +1147,10 @@ Every directional microphone has a "null" — an angle where the mic is least se
 **Mic Technique — Eat the Mic:**
 The single most effective way to increase gain before feedback is to get the sound source closer to the microphone. The inverse square law states that sound intensity decreases by 6 dB for every doubling of distance:
 
-- A singer with their lips touching the mic grille (0 inches) produces a signal 12 dB louder than a singer 6 inches away.
+- A singer with their lips touching the mic grille (contact) produces a signal 12 dB louder than a singer 15 cm away.
 - That's 12 dB of gain before feedback that costs nothing — no EQ, no speaker repositioning, nothing.
 
-When a singer holds the mic at their chest or stands 12 inches away, the engineer must increase the preamp gain to compensate, which dramatically reduces gain before feedback. Educate singers: get close to the mic, and you'll hear yourself better at a lower monitor volume.
+When a singer holds the mic at their chest or stands 30 cm away, the engineer must increase the preamp gain to compensate, which dramatically reduces gain before feedback. Educate singers: get close to the mic, and you'll hear yourself better at a lower monitor volume.
 
 **Gain Before Feedback (GBF):**
 GBF is determined by:
@@ -1192,7 +1192,7 @@ A: (1) A microphone is picking up sound from a speaker. (2) The gain around the 
 A: The cardioid microphone's null zone is at 180° (directly behind the capsule). Place the wedge so that sound from it arrives at the back of the microphone, where the mic is least sensitive. In practice, the wedge is directly in front of the singer, with the back of the mic facing the wedge.
 
 **Q3: How does the inverse square law relate to gain before feedback?**
-A: Sound intensity decreases by 6 dB for every doubling of distance. A singer with their lips on the mic produces a signal approximately 12 dB louder than one standing 6 inches away. The closer the source is to the mic, the less preamp gain is needed, and the more gain before feedback is available. "Eat the mic" is the best feedback prevention.
+A: Sound intensity decreases by 6 dB for every doubling of distance. A singer with their lips on the mic produces a signal approximately 12 dB louder than one standing 15 cm away. The closer the source is to the mic, the less preamp gain is needed, and the more gain before feedback is available. "Eat the mic" is the best feedback prevention.
 
 **Q4: You have 4 open microphones on stage. By how much does this reduce your gain before feedback compared to a single microphone?**
 A: GBF decreases by 3 dB for every doubling of open microphones. Compared to 1 mic: 2 mics = -3 dB, 4 mics = -6 dB. Four open microphones reduce gain before feedback by 6 dB.
@@ -1214,7 +1214,7 @@ A: The problem is physical, not equalizable. The monitor is too close to the mic
 Set up a speaker at a fixed position and a cardioid microphone on a stand. Connect the mic to a mixer with the monitor send going to the speaker. Slowly rotate the speaker around the mic (or rotate the mic) in 30° increments. At each position, note how much you can increase the monitor volume before feedback. Plot the results on a polar diagram.
 
 **Exercise 2: Inverse Square Law Demonstration**
-Set up a microphone and have a singer perform at 1 inch from the mic, then at 6 inches, then at 12 inches. At each distance, measure the preamp gain needed to achieve the same level at the mixer. You should need approximately 6 dB more gain for each doubling of distance. Note how much gain before feedback is lost at each distance increase.
+Set up a microphone and have a singer perform at 2.5 cm from the mic, then at 15 cm, then at 30 cm. At each distance, measure the preamp gain needed to achieve the same level at the mixer. You should need approximately 6 dB more gain for each doubling of distance. Note how much gain before feedback is lost at each distance increase.
 
 **Exercise 3: Ringing Out a Monitor**
 Set up a wedge and a cardioid microphone in a typical performance position. Slowly increase the monitor send until the system rings. Identify the frequency using the console's RTA. Apply a narrow parametric EQ cut at that frequency. Increase the monitor send again until the next ring. Repeat 3-5 times. Note how the gain before feedback improves with each cut. Also note how the monitor's tonal quality changes after 5 cuts — it should start sounding thin.
@@ -1419,7 +1419,7 @@ Soundcheck is where you dial in the tones, set the monitor mixes, and build the 
 - Add compression to control dynamics (vocals, bass, drums).
 - Add effects sparingly — a little reverb on vocals, a little delay on guitars.
 - Reference your mix at different volume levels.
-- Walk the room during soundcheck if possible. The mix at FOH is not the same as the mix 20 feet away.
+- Walk the room during soundcheck if possible. The mix at FOH is not the same as the mix 6 m away.
 
 #### Line-Check (The Save)
 
@@ -1477,7 +1477,7 @@ The show's over, but how you strike the gear determines how smoothly the next gi
 
 **The Over-Under Cable Wrap:**
 1. Hold the connector in your left hand.
-2. With your right hand, reach out and grab the cable about 18 inches from your left hand.
+2. With your right hand, reach out and grab the cable about 45 cm from your left hand.
 3. Twist your right hand slightly to form a natural loop (the "over" loop). Drop it into your left hand.
 4. Reach out again, but reverse the twist of your wrist (the "under" loop). The cable will naturally form a loop in the opposite direction.
 5. Continue alternating over and under loops until the entire cable is coiled.
