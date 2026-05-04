@@ -6,18 +6,28 @@ date: "2026"
 theme: "AnnArbor"
 colortheme: "crane"
 fontfamily: "dejavu"
-fontsize: 12pt
-geometry: "paperwidth=297mm,paperheight=210mm"
+fontsize: 10pt
+classoption: "aspectratio=169"
+section-titles: false
 header-includes:
   - \usepackage{booktabs}
   - \setbeamertemplate{navigation symbols}{}
+  - |
+    \AtBeginSubsection[]{
+      \begin{frame}[plain,c]
+        \vfill\centering
+        {\large\insertsectionhead}\\[1em]
+        {\LARGE\textbf{\insertsubsectionhead}}
+        \vfill
+      \end{frame}
+    }
 ---
 
 # Course Overview
 
 ### What You Will Learn
 
-- **Module 1:** The Stage Setup — Power, cabling, DIs, IEMs
+- **Module 1:** The Stage Setup — Power, cabling, DIs, Monitors
 - **Module 2:** Connectivity, Impedance & Signal Levels
 - **Module 3:** Ground Loops & Noise
 - **Module 4:** The Mixer Signal Path
@@ -55,15 +65,15 @@ header-includes:
 - **Star ground:** Plug ALL audio equipment into a single power distribution source
 
 ```
-     ┌──────────────────────────────────────┐
-     │          POWER DISTRIBUTION          │
-     │         (Single Ground Point)        │
-     └──┬───────┬───────┬───────┬───────┬───┘
-        │       │       │       │       │
-     ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐
-     │ FOH │ │Bass │ │Gtr  │ │Keys │ │Drum │
-     │Console│ │Amp  │ │Amp  │ │Rig  │ │Amps │
-     └─────┘ └─────┘ └─────┘ └─────┘ └─────┘
+     ┌───────────────────────────────────────────┐
+     │            POWER DISTRIBUTION             │
+     │           (Single Ground Point)           │
+     └──┬──────────┬───────┬───────┬───────┬─────┘
+        │          │       │       │       │
+     ┌──┴────┐ ┌───┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐
+     │ FOH   │ │ Bass │ │Gtr  │ │Keys │ │Drum │
+     │Console│ │ Amp  │ │Amp  │ │Rig  │ │Amps │
+     └───────┘ └──────┘ └─────┘ └─────┘ └─────┘
 ```
 
 ### Module 1 — Cable Management
@@ -75,7 +85,7 @@ header-includes:
 
 ```
     Audio Cable ─────────────┐
-                            │  ← 90° crossing
+                             │  ← 90° crossing
     Power Cable ─────────────┘
 ```
 
@@ -98,17 +108,27 @@ header-includes:
 
 ### Module 1 — DI Boxes (Direct Injection)
 
-Converts high-Z unbalanced signal → low-Z balanced signal for long cable runs
+Converts high-Z unbalanced signal → low-Z balanced signal for long cable runs and mixer mic inputs.
 
 | | **Passive DI** | **Active DI** |
 |---|---|---|
 | **Power** | None (transformer) | Phantom or battery |
-| **Best for** | Strong signals (bass, speaker emu) | Weak signals (piezo, keyboards, laptops) |
-| **Input Z** | Medium | High (1MΩ+) |
-| **Distortion risk** | Handles hot signals well | Can distort on very hot sources |
-| **Examples** | Radial JDI, Whirlwind IMP 2 | Radial J48, Countryman Type 85 |
+| **Best for** | Strong or active sources (bass, synths, speaker-level feeds with pad) | Weak or very high-Z sources (piezo pickups, some acoustic instruments, some passive pickups) |
+| **Input Z** | Medium  (few 100 kΩ) | High (typically 1 MΩ or more) |
+| **Headroom** | Handles hot signals well | Can clip sooner on very hot sources |
+| **Examples** | Radial JDI, Whirlwind IMP 2, **Klark Teknik DI 20P** | Radial J48, Countryman Type 85, **Behringer Ultra-DI** |
 
-**Ground Lift Switch:** Disconnects Pin 1 (shield) to break ground loops. Always try both positions — use whichever is quieter.
+**Ground Lift Switch:** Disconnects Pin 1 (shield) at the XLR output to help break ground loops. Try both positions and use whichever is quieter.
+
+### Module 1 — Monitor Wedges (Floor Monitors)
+
+- Floor speakers angled up toward the performer; also called **stage monitors** or **foldback**
+- Fed from a dedicated **aux/monitor send** so each musician can get their own mix
+- Good for vocals, cues, and band awareness without isolating the performer from the room
+- Simple, reliable, and common on small to mid-size stages
+- Trade-off: increase **stage volume** and can cause **feedback** if placement or EQ is poor
+
+**Pro tip:** Place the wedge in the microphone’s least-sensitive zone and keep only what the musician needs in the mix for more gain before feedback.
 
 ### Module 1 — In-Ear Monitors (IEMs)
 
@@ -125,7 +145,7 @@ Converts high-Z unbalanced signal → low-Z balanced signal for long cable runs
 1. **Audio needs dedicated power** — separate from lighting, HVAC, catering
 2. **Star grounding eliminates ground loops** — single power distro for all audio
 3. **Cross audio and power cables at 90°** — never run them parallel
-4. **Match the DI to the source** — passive for strong signals, active for weak
+4. **Use DI boxes** to convert unbalanced signals to balanced, especially in long cable runs
 5. **IEMs reduce stage volume and improve FOH clarity**
 6. **Secure every cable** — gaffer tape (never duct tape)
 
@@ -722,14 +742,14 @@ Acoustic feedback: speaker → mic → mixer → amp → speaker (louder). Loop 
 ```
          Cardioid                    Hypercardioid
               Front                        Front
-               │                            │
+               │                             │
         ───────┼───────               ───────┼───────
-       /       │        \             /       │        \
-      /  Pickup Zone     \           /  Pickup Zone      \
-     |       │ │         |         |       │ │          |
-     |       │ │         |         |       │ │          |
-      \     Null│        /           \ Null │ │ Null    /
-       \    Zone│       /             \Zone │ │ Zone  /
+       /       │        \            /       │        \
+      /  Pickup Zone     \          /  Pickup Zone     \
+     |       │ │         |         |        │ │        |
+     |       │ │         |         |        │ │        |
+      \     Null│        /          \ Null  │ │ Null   /
+       \    Zone│       /            \Zone  │ │ Zone  /
         ───────┼───────               ──────┼─┼──────
                │││                          /││\
               Back                      (Slight pickup
@@ -763,7 +783,7 @@ Acoustic feedback: speaker → mic → mixer → amp → speaker (louder). Loop 
 
 | Open Mics | GBF Loss |
 |---|---|
-| 1 | 0 dB |
+| 1 | 0 dB |Eat the
 | 2 | −3 dB |
 | 4 | −6 dB |
 | 8 | −9 dB |

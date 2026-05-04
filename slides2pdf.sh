@@ -24,9 +24,7 @@ pandoc "$INPUT" \
     --pdf-engine=xelatex \
     -V mainfont="DejaVu Sans" \
     -V monofont="DejaVu Sans Mono" \
-    -V fontsize=14pt \
-    -V geometry:paperwidth=297mm \
-    -V geometry:paperheight=210mm \
+    -V fontsize=9pt \
     --wrap=none \
     --slide-level=3
 
